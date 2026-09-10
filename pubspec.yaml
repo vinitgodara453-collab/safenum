@@ -1,0 +1,28 @@
+name: safenum
+description: "SafeNum – personal number & device security app (self-protection only)"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  flutter_dotenv: ^5.1.0
+  # For real integration later:
+  # http: ^1.2.0                 -> calling breach-check / spam-db APIs
+  # firebase_core / firebase_messaging -> SIM-swap & breach push alerts
+  # in_app_purchase: ^3.1.13     -> premium subscription billing
+  # permission_handler: ^11.3.0  -> reading the device's OWN installed-app permissions
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
